@@ -4,6 +4,7 @@
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_CPU_ABI := armeabi
+TARGET_ARCH_VARIANT := armv5te
 
 TARGET_NO_BOOTLOADER := true
 
@@ -43,4 +44,4 @@ BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/xdandroid/msm/egl.cfg
 
--include device/xdandroid/msm/BoardConfigVendor.mk
+-include vendor/xdandroid/msm/BoardConfigVendor.mk
