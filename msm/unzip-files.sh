@@ -53,13 +53,7 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/libaudioeq.so:system/lib/libaudioeq.so \\
     __DESTDIR__/libcamera.so:system/lib/libcamera.so \\
     __DESTDIR__/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
-    __DESTDIR__/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
-    __DESTDIR__/libOmxCore.so:system/lib/libOmxCore.so \\
-    __DESTDIR__/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
-    __DESTDIR__/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
-    __DESTDIR__/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    __DESTDIR__/libopencorehw.so:system/lib/libopencorehw.so \\
-    __DESTDIR__/libqcomm_omx.so:system/lib/libqcomm_omx.so
+    __DESTDIR__/libmm-adspsvc.so:system/lib/libmm-adspsvc.so
 
 EOF
 
@@ -71,10 +65,8 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/Vending.apk:system/app/Vending.apk \\
     __DESTDIR__/HtcEmailPolicy.apk:system/app/HtcEmailPolicy.apk \\
     __DESTDIR__/Street.apk:system/app/Street.apk \\
-    __DESTDIR__/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \\
     __DESTDIR__/Facebook.apk:system/app/Facebook.apk \\
     __DESTDIR__/VoiceSearch.apk:system/app/VoiceSearch.apk \\
-    __DESTDIR__/SetupWizard.apk:system/app/SetupWizard.apk \\
     __DESTDIR__/YouTube.apk:system/app/YouTube.apk \\
     __DESTDIR__/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \\
     __DESTDIR__/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \\
@@ -98,7 +90,6 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/PassionQuickOffice.apk:system/app/PassionQuickOffice.apk \\
     __DESTDIR__/Talk.apk:system/app/Talk.apk \\
     __DESTDIR__/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \\
-    __DESTDIR__/libstagefrighthw.so:system/lib/libstagefrighthw.so \\
     __DESTDIR__/libspeech.so:system/lib/libspeech.so \\
     __DESTDIR__/libinterstitial.so:system/lib/libinterstitial.so
     
