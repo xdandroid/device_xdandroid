@@ -8,6 +8,10 @@ TARGET_ARCH_VARIANT := armv5te
 
 TARGET_NO_BOOTLOADER := true
 
+# Let's get some speed by default now.
+WITH_JIT := true
+ENABLE_JSC_JIT := true
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libWifiApi
