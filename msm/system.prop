@@ -3,7 +3,9 @@
 #
 
 rild.libpath=/lib/eclair/libhtcgeneric-ril.so
-wifi.interface = tiwlan0
+
+wifi.interface=tiwlan0
+
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.

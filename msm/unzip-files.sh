@@ -75,6 +75,7 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/GoogleGoggles.apk:system/app/GoogleGoggles.apk \\
     __DESTDIR__/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \\
     __DESTDIR__/Maps.apk:system/app/Maps.apk \\
+    __DESTDIR__/NetworkLocation.apk:system/app/NetworkLocation.apk \\
     __DESTDIR__/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \\
     __DESTDIR__/GoogleFeedback.apk:system/app/GoogleFeedback.apk \\
     __DESTDIR__/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \\
