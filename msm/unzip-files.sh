@@ -5,7 +5,7 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-passion-FRF83-signed.zip
+GAPPSZIP=gapps-ds-FRF91-signed.zip
 HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
@@ -61,38 +61,35 @@ if [ -f "${ANDROID_ROOT}"/$GAPPSZIP ]
 then
 	(cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g >> ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
 PRODUCT_COPY_FILES += \\
-    __DESTDIR__/VpnServices.apk:system/app/VpnServices.apk \\
-    __DESTDIR__/Vending.apk:system/app/Vending.apk \\
-    __DESTDIR__/HtcEmailPolicy.apk:system/app/HtcEmailPolicy.apk \\
-    __DESTDIR__/Street.apk:system/app/Street.apk \\
-    __DESTDIR__/Facebook.apk:system/app/Facebook.apk \\
-    __DESTDIR__/VoiceSearch.apk:system/app/VoiceSearch.apk \\
-    __DESTDIR__/YouTube.apk:system/app/YouTube.apk \\
-    __DESTDIR__/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \\
+    __DESTDIR__/GenieWidget.apk:system/app/GenieWidget.apk \\
+    __DESTDIR__/Gmail.apk:system/app/Gmail.apk \\
     __DESTDIR__/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \\
-    __DESTDIR__/MediaUploader.apk:system/app/MediaUploader.apk \\
-    __DESTDIR__/MarketUpdater.apk:system/app/MarketUpdater.apk \\
-    __DESTDIR__/GoogleGoggles.apk:system/app/GoogleGoggles.apk \\
     __DESTDIR__/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \\
-    __DESTDIR__/Maps.apk:system/app/Maps.apk \\
-    __DESTDIR__/NetworkLocation.apk:system/app/NetworkLocation.apk \\
     __DESTDIR__/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \\
     __DESTDIR__/GoogleFeedback.apk:system/app/GoogleFeedback.apk \\
-    __DESTDIR__/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \\
-    __DESTDIR__/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \\
-    __DESTDIR__/Twitter.apk:system/app/Twitter.apk \\
-    __DESTDIR__/HtcCopyright.apk:system/app/HtcCopyright.apk \\
-    __DESTDIR__/Gmail.apk:system/app/Gmail.apk \\
-    __DESTDIR__/com.amazon.mp3.apk:system/app/com.amazon.mp3.apk \\
-    __DESTDIR__/googlevoice.apk:system/app/googlevoice.apk \\
-    __DESTDIR__/HtcSettings.apk:system/app/HtcSettings.apk \\
     __DESTDIR__/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \\
-    __DESTDIR__/GenieWidget.apk:system/app/GenieWidget.apk \\
-    __DESTDIR__/PassionQuickOffice.apk:system/app/PassionQuickOffice.apk \\
+    __DESTDIR__/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \\
+    __DESTDIR__/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \\
+    __DESTDIR__/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \\
+    __DESTDIR__/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \\
+    __DESTDIR__/MarketUpdater.apk:system/app/MarketUpdater.apk \\
+    __DESTDIR__/MediaUploader.apk:system/app/MediaUploader.apk \\
+    __DESTDIR__/NetworkLocation.apk:system/app/NetworkLocation.apk \\
+    __DESTDIR__/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \\
+    __DESTDIR__/Street.apk:system/app/Street.apk \\
     __DESTDIR__/Talk.apk:system/app/Talk.apk \\
+    __DESTDIR__/Vending.apk:system/app/Vending.apk \\
+    __DESTDIR__/VoiceSearch.apk:system/app/VoiceSearch.apk \\
+    __DESTDIR__/YouTube.apk:system/app/YouTube.apk \\
+    __DESTDIR__/googlevoice.apk:system/app/googlevoice.apk \\
+    __DESTDIR__/kickback.apk:system/app/kickback.apk \\
+    __DESTDIR__/soundback.apk:system/app/soundback.apk \\
+    __DESTDIR__/talkback.apk:system/app/talkback.apk \\
     __DESTDIR__/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \\
-    __DESTDIR__/libspeech.so:system/lib/libspeech.so \\
-    __DESTDIR__/libinterstitial.so:system/lib/libinterstitial.so
+    __DESTDIR__/features.xml:system/etc/permissions/features.xml \\
+    __DESTDIR__/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \\
+    __DESTDIR__/libinterstitial.so:system/lib/libinterstitial.so \\
+    __DESTDIR__/libspeech.so:system/lib/libspeech.so
     
 EOF
 fi
