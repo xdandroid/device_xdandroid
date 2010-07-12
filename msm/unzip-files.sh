@@ -5,7 +5,7 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-ds-FRF91-signed.zip
+GAPPSZIP=gapps-mdpi-FRF91-3-signed.zip
 HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
@@ -70,8 +70,8 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \\
     __DESTDIR__/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \\
     __DESTDIR__/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \\
-    __DESTDIR__/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \\
     __DESTDIR__/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \\
+    __DESTDIR__/Maps.apk:system/app/Maps.apk \\
     __DESTDIR__/MarketUpdater.apk:system/app/MarketUpdater.apk \\
     __DESTDIR__/MediaUploader.apk:system/app/MediaUploader.apk \\
     __DESTDIR__/NetworkLocation.apk:system/app/NetworkLocation.apk \\
@@ -81,6 +81,7 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/Vending.apk:system/app/Vending.apk \\
     __DESTDIR__/VoiceSearch.apk:system/app/VoiceSearch.apk \\
     __DESTDIR__/YouTube.apk:system/app/YouTube.apk \\
+    __DESTDIR__/com.amazon.mp3.apk:system/app/com.amazon.mp3.apk \\
     __DESTDIR__/googlevoice.apk:system/app/googlevoice.apk \\
     __DESTDIR__/kickback.apk:system/app/kickback.apk \\
     __DESTDIR__/soundback.apk:system/app/soundback.apk \\
@@ -88,9 +89,8 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \\
     __DESTDIR__/features.xml:system/etc/permissions/features.xml \\
     __DESTDIR__/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \\
-    __DESTDIR__/libinterstitial.so:system/lib/libinterstitial.so \\
     __DESTDIR__/libspeech.so:system/lib/libspeech.so
-    
+
 EOF
 fi
 
