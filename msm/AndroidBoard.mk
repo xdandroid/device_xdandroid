@@ -27,12 +27,6 @@ LOCAL_MODULE := vold.fstab
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE := apns-conf.xml
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
 # TODO: Look at this when we stop using haret+sd
 #include $(CLEAR_VARS)
 #LOCAL_MODULE := wlan.ko
@@ -57,6 +51,10 @@ LOCAL_MODULE := .keep
 LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
+
+# APNs list
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml
 
 -include vendor/xdandroid/msm/AndroidBoardVendor.mk
 
