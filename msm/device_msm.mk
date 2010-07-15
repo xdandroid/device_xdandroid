@@ -31,12 +31,6 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/media_profiles.xml:/system/etc/media_profiles.xml
 
-# Time between scans in seconds. Keep it high to minimize battery drain.
-# This only affects the case in which there are remembered access points,
-# but none are in range.
-PRODUCT_PROPERTY_OVERRIDES += \
-	wifi.supplicant_scan_interval=15
-
 PRODUCT_MANUFACTURER := XDAndroid
 
 # proprietary side of the device
