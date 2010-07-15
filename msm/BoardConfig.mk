@@ -27,6 +27,9 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1
 
 BOARD_HAVE_BLUETOOTH := true
 
+# Rhodium has Broadcom bluetooth
+BOARD_HAVE_BLUETOOTH_BCM := true
+
 BOARD_VENDOR_USE_AKMD := true
 
 USE_PV_WINDOWS_MEDIA := false
