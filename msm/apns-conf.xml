@@ -110,7 +110,7 @@
   <apn carrier="Al-Madar MMS" mcc="606" mnc="01" apn="almadar.mms" user="" server="" password="" mmsc="http://almadar.mms/servlets/mms" mmsproxy="41.208.82.50" mmsport="8080" type="mms"/>
   <apn carrier="Amazonia GPRS" numeric="72424" mcc="724" mnc="24" apn="gprs.amazoniacelular.com.br" user="celular" server="" password="celular" proxy="" port="" mmsproxy="" mmsport="" mmsprotocol="" mmsc="null" type="default" />
   <apn carrier="Amazonia MMS" numeric="72424" mcc="724" mnc="24" apn="mmsgprs.amazoniacelular.com.br" user="celular" server="" password="celular" proxy="" port="" mmsproxy="200.192.230.142" mmsport="8080" mmsprotocol="" mmsc="http://mms.amazoniacelular.com.br" type="mms" />
-  <apn carrier="Android" mcc="310" mnc="995" apn="internet" />
+  <apn carrier="Android" mcc="310" mnc="995" apn="internet" user="none" server="*" password="none" type="*" />
   <apn carrier="ASTER" mcc="260" mnc="03" apn="aster.internet" user="internet" password="internet" type="default" />
   <apn carrier="ASTER MMS" mcc="260" mnc="03" apn="aster.mms" user="mms" password="mms" mmsc="http://mms.aster.pl" mmsproxy="192.168.006.138" mmsport="8080" type="mms" />
   <apn carrier="ATT" apn="wap.cingular" user="WAP@CINGULARGPRS.COM" pass="CINGULAR1" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" mcc="310" mnc="410"/>
