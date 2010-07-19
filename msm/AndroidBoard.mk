@@ -52,9 +52,5 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
-# APNs list
-PRODUCT_COPY_FILES += \
-	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml
-
 -include vendor/xdandroid/msm/AndroidBoardVendor.mk
 
