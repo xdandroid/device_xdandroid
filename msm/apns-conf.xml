@@ -110,6 +110,7 @@
   <apn carrier="Al-Madar MMS" mcc="606" mnc="01" apn="almadar.mms" user="" server="" password="" mmsc="http://almadar.mms/servlets/mms" mmsproxy="41.208.82.50" mmsport="8080" type="mms"/>
   <apn carrier="Amazonia GPRS" numeric="72424" mcc="724" mnc="24" apn="gprs.amazoniacelular.com.br" user="celular" server="" password="celular" proxy="" port="" mmsproxy="" mmsport="" mmsprotocol="" mmsc="null" type="default" />
   <apn carrier="Amazonia MMS" numeric="72424" mcc="724" mnc="24" apn="mmsgprs.amazoniacelular.com.br" user="celular" server="" password="celular" proxy="" port="" mmsproxy="200.192.230.142" mmsport="8080" mmsprotocol="" mmsc="http://mms.amazoniacelular.com.br" type="mms" />
+  <apn carrier="Android" mcc="310" mnc="995" apn="internet" />
   <apn carrier="ASTER" mcc="260" mnc="03" apn="aster.internet" user="internet" password="internet" type="default" />
   <apn carrier="ASTER MMS" mcc="260" mnc="03" apn="aster.mms" user="mms" password="mms" mmsc="http://mms.aster.pl" mmsproxy="192.168.006.138" mmsport="8080" type="mms" />
   <apn carrier="ATT" apn="wap.cingular" user="WAP@CINGULARGPRS.COM" pass="CINGULAR1" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" mcc="310" mnc="410"/>
@@ -203,7 +204,6 @@
   <apn carrier="Carrefour Mova MMS" mcc="260" mnc="01" apn="mms.mova.pl" mmsc="http://mms.mova.pl:8002/" mmsproxy="212.002.096.016" mmsport="8080" type="mms" />
   <apn carrier="CBW Internet" apn="wap.gocbw.com" proxy="216.68.79.202" port="80" user="cbw" password="" server="" mmsc="" mmsport="" mcc="310" mnc="420" type="default" />
   <apn carrier="CBW MMS" apn="wap.gocbw.com" proxy="" port="" user="" password="" server="" mmsc="http://mms.gocbw.com:8088/mms" mmsproxy="216.68.79.202" mmsport="80" mcc="310" mnc="420" authenticationtype="PAP" type="mms" />
-  <apn carrier="CDMA Generic" mcc="310" mnc="995" apn="internet" />
   <apn carrier="Celcom" mcc="502" mnc="13" apn="celcom3g" user="" server="" password="" mmsc="" type="default"/>
   <apn carrier="Celcom MMS" mcc="502" mnc="13" apn="celcom3g" user="mms" server="" password="mms" mmsc="http://mms.celcom.net.my" mmsproxy="10.128.1.242" mmsport="8080" type="mms"/>
   <apn carrier="CellCOM" mcc="425" mnc="02" apn="internetg" user="" server="" password="" mmsc="" type="default"/>
