@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/media_profiles.xml:/system/etc/media_profiles.xml
 
+# APNs list
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml
+
 PRODUCT_MANUFACTURER := XDAndroid
 
 # proprietary side of the device
