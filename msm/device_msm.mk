@@ -31,9 +31,10 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/media_profiles.xml:/system/etc/media_profiles.xml
 
-# APNs list
+# XDAndroid-specific: APNs list and boot animation
 PRODUCT_COPY_FILES += \
-	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml
+	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml \
+	device/xdandroid/msm/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_MANUFACTURER := XDAndroid
 
