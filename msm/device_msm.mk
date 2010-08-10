@@ -27,6 +27,11 @@ PRODUCT_COPY_FILES := \
 	frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
 	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
 
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.opengles.version=65536
+
 # media configuration xml file
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/media_profiles.xml:/system/etc/media_profiles.xml
