@@ -19,6 +19,10 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/xdandroid/msm/overlay
 
+# Gallery3D doesn't work so well for us.
+PRODUCT_PACKAGES += \
+	Gallery
+
 # Install the features available on this device.
 PRODUCT_COPY_FILES := \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
