@@ -19,6 +19,7 @@ BOARD_WLAN_TI_STA_DK_ROOT   := system/wlan/ti/sta_dk_4_0_4_32
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "wlan"
+WIFI_DRIVER_FW_AP_PATH      := "/etc/firmware/BCM4325_apsta.bin"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
 TARGET_BOOTLOADER_BOARD_NAME := msm
