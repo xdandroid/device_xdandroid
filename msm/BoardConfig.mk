@@ -45,7 +45,7 @@ BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x04ac0000)
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Remove when we have camera support.
-USE_CAMERA_STUB := true
+USE_CAMERA_STUB := false
 
 # Our hardware is not OpenGLES-2 capable
 BOARD_NO_GL2 := true
