@@ -21,7 +21,9 @@ DEVICE_PACKAGE_OVERLAYS := device/xdandroid/msm/overlay
 
 # Gallery3D doesn't work so well for us.
 PRODUCT_PACKAGES += \
-	Gallery
+	Gallery \
+	OpenWnn \
+	PinyinIME
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES := \
