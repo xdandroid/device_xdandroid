@@ -19,6 +19,9 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/xdandroid/msm/overlay
 
+# Use high-density artwork where available
+PRODUCT_LOCALES := hdpi
+
 # Gallery3D doesn't work so well for us.
 PRODUCT_PACKAGES += \
 	Gallery \
