@@ -5,7 +5,7 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-mdpi-tiny-20100930-signed.zip
+GAPPSZIP=gapps-hdpi-20100930-signed.zip
 HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
@@ -62,6 +62,8 @@ if [ -f "${ANDROID_ROOT}"/$GAPPSZIP ]
 then
 	(cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g >> ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
 PRODUCT_COPY_FILES += \\
+    __DESTDIR__/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \\
+    __DESTDIR__/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \\
     __DESTDIR__/GenieWidget.apk:system/app/GenieWidget.apk \\
     __DESTDIR__/Gmail.apk:system/app/Gmail.apk \\
     __DESTDIR__/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \\
@@ -75,15 +77,18 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/HtcEmailPolicy.apk:system/app/HtcEmailPolicy.apk \\
     __DESTDIR__/HtcSettings.apk:system/app/HtcSettings.apk \\
     __DESTDIR__/LatinImeTutorial.apk:system/app/LatinImeTutorial.apk \\
+    __DESTDIR__/Maps.apk:system/app/Maps.apk \\
     __DESTDIR__/MarketUpdater.apk:system/app/MarketUpdater.apk \\
     __DESTDIR__/MediaUploader.apk:system/app/MediaUploader.apk \\
     __DESTDIR__/NetworkLocation.apk:system/app/NetworkLocation.apk \\
     __DESTDIR__/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \\
+    __DESTDIR__/PassionQuickOffice.apk:system/app/PassionQuickOffice.apk \\
     __DESTDIR__/Street.apk:system/app/Street.apk \\
     __DESTDIR__/Talk.apk:system/app/Talk.apk \\
     __DESTDIR__/Vending.apk:system/app/Vending.apk \\
     __DESTDIR__/VoiceSearch.apk:system/app/VoiceSearch.apk \\
     __DESTDIR__/YouTube.apk:system/app/YouTube.apk \\
+    __DESTDIR__/googlevoice.apk:system/app/googlevoice.apk \\
     __DESTDIR__/kickback.apk:system/app/kickback.apk \\
     __DESTDIR__/soundback.apk:system/app/soundback.apk \\
     __DESTDIR__/talkback.apk:system/app/talkback.apk \\
@@ -91,7 +96,7 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/features.xml:system/etc/permissions/features.xml \\
     __DESTDIR__/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \\
     __DESTDIR__/libspeech.so:system/lib/libspeech.so \\
-    __DESTDIR__/libvoicesearch.so:system/lib/libvoicesearch.so \\
+    __DESTDIR__/libvoicesearch.so:system/lib/libvoicesearch.so
     
 EOF
 fi
