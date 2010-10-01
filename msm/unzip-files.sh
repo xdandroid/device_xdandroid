@@ -5,7 +5,7 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-mdpi-tiny-20100816-signed.zip
+GAPPSZIP=gapps-mdpi-tiny-20100930-signed.zip
 HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
@@ -56,6 +56,8 @@ PRODUCT_COPY_FILES += \\
 
 EOF
 
+# The PRODUCT_COPY_FILES below is generated (and hand-edited afterwards) via...
+# $ for I in `unzip -l ../../../gapps-mdpi-tiny-$VERSION-signed.zip system/* | grep system/ | sed -e 's:^.*system:system:'` ; do echo "    __DESTDIR__/${I##*/}:${I} \\\\" ; done
 if [ -f "${ANDROID_ROOT}"/$GAPPSZIP ]
 then
 	(cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g >> ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
@@ -78,6 +80,7 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/NetworkLocation.apk:system/app/NetworkLocation.apk \\
     __DESTDIR__/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \\
     __DESTDIR__/Street.apk:system/app/Street.apk \\
+    __DESTDIR__/Talk.apk:system/app/Talk.apk \\
     __DESTDIR__/Vending.apk:system/app/Vending.apk \\
     __DESTDIR__/VoiceSearch.apk:system/app/VoiceSearch.apk \\
     __DESTDIR__/YouTube.apk:system/app/YouTube.apk \\
@@ -87,12 +90,9 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \\
     __DESTDIR__/features.xml:system/etc/permissions/features.xml \\
     __DESTDIR__/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \\
-    __DESTDIR__/libimageutils.so:system/lib/libimageutils.so \\
-    __DESTDIR__/libinterstitial.so:system/lib/libinterstitial.so \\
     __DESTDIR__/libspeech.so:system/lib/libspeech.so \\
     __DESTDIR__/libvoicesearch.so:system/lib/libvoicesearch.so \\
-    __DESTDIR__/libzxing.so:system/lib/libzxing.so
-
+    
 EOF
 fi
 
