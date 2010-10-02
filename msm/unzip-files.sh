@@ -113,6 +113,7 @@ fi
 ./setup-makefiles.sh
 
 # Remove zipfile comments (ie. those added by SignApk) from extracted packages
+# We do this because the comments break `make dist`
 cd "${ANDROID_ROOT}"/$DESTDIR
 for I in *.apk
 do
