@@ -20,4 +20,9 @@
 <resources>
     <!-- Whether or not auto-correction should be enabled by default -->
     <bool name="enable_autocorrect">true</bool>
+
+    <bool name="im_is_default">true</bool>
+
+    <!-- Whether or not voice input is enabled by default. -->
+    <bool name="voice_input_default">true</bool>
 </resources>
