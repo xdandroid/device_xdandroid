@@ -12,7 +12,7 @@ DESTDIR=vendor/xdandroid/$DEVICE/proprietary
 
 if [ "$1" == "-g" ]
 then
-	[ -f "${ANDROID_ROOT}"/$GAPPSZIP ] || wget --tries=5 -O "${ANDROID_ROOT}"/$GAPPSZIP http://mirror.teamdouche.net/get/various/$GAPPSZIP
+	wget --tries=5 -O "${ANDROID_ROOT}"/$GAPPSZIP http://mirror.teamdouche.net/get/various/$GAPPSZIP
 	if [ $? != 0 ]
 	then
 		echo "Error downloading Google apps package http://mirror.teamdouche.net/get/various/$GAPPSZIP. Exiting." >/dev/stderr
