@@ -5,10 +5,20 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-hdpi-20100930-signed.zip
+GAPPSZIP=gapps-hdpi-20101008-signed.zip
 HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
+
+if [ "$1" == "-g" ]
+then
+	[ -f "${ANDROID_ROOT}"/$GAPPSZIP ] || wget --tries=5 -O "${ANDROID_ROOT}"/$GAPPSZIP http://mirror.teamdouche.net/get/various/$GAPPSZIP
+	if [ $? != 0 ]
+	then
+		echo "Error downloading Google apps package http://mirror.teamdouche.net/get/various/$GAPPSZIP. Exiting." >/dev/stderr
+		exit 1
+	fi
+fi
 
 mkdir -p "${ANDROID_ROOT}"/$DESTDIR
 
