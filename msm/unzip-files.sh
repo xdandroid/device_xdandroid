@@ -5,17 +5,18 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-hdpi-20101008-signed.zip
+GAPPSZIP=gapps-hdpi-20101020.1-signed.zip
+GAPPSMIRROR="http://www.tap3w0rm.com/hosted/android/gapps"
 HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
 
 if [ "$1" == "-g" ]
 then
-	wget --tries=5 -O "${ANDROID_ROOT}"/$GAPPSZIP http://mirror.teamdouche.net/get/various/$GAPPSZIP
+	wget --tries=5 -O "${ANDROID_ROOT}"/$GAPPSZIP $GAPPSMIRROR/$GAPPSZIP
 	if [ $? != 0 ]
 	then
-		echo "Error downloading Google apps package http://mirror.teamdouche.net/get/various/$GAPPSZIP. Exiting." >/dev/stderr
+		echo "Error downloading Google apps package $GAPPSMIRROR/$GAPPSZIP. Exiting." >/dev/stderr
 		exit 1
 	fi
 fi
@@ -107,7 +108,7 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \\
     __DESTDIR__/libspeech.so:system/lib/libspeech.so \\
     __DESTDIR__/libvoicesearch.so:system/lib/libvoicesearch.so
-    
+
 EOF
 fi
 
