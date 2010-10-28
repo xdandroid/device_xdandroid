@@ -11,7 +11,7 @@ HW3DZIP=hw3d.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
 
-if [ "$1" == "-g" ]
+if [ "$1" = "-g" ]
 then
 	wget --tries=5 -O "${ANDROID_ROOT}"/$GAPPSZIP $GAPPSMIRROR/$GAPPSZIP
 	if [ $? != 0 ]
