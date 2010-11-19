@@ -5,7 +5,7 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-hdpi-20101025-signed.zip
+GAPPSZIP=gapps-hdpi-20101114-signed.zip
 GAPPSMIRROR="http://cyanogenmod-mirror.local.host.name/gapps"
 HW3DZIP=hw3d.zip
 
