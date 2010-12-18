@@ -24,6 +24,7 @@ $(file) : $(LOCAL_PATH)/init.xdandroid.rc | $(ACP)
 include $(CLEAR_VARS)
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE := vold.fstab
+LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
@@ -39,8 +40,9 @@ include $(BUILD_PREBUILT)
 # XDANDROID uses an init system that checks for a file in /system to determine build type
 include $(CLEAR_VARS)
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE := froyo.build
+LOCAL_MODULE := gingerbread.build
 LOCAL_MODULE_PATH := $(TARGET_OUT)
+LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
@@ -49,6 +51,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE := .keep
 LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
+LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
