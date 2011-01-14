@@ -19,42 +19,6 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.xdandroid.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
-# This will install the file in /system/etc
-#
-include $(CLEAR_VARS)
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE := vold.fstab
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
-# TODO: Look at this when we stop using haret+sd
-#include $(CLEAR_VARS)
-#LOCAL_MODULE := wlan.ko
-#LOCAL_MODULE_TAGS := user
-#LOCAL_MODULE_CLASS := ETC
-#LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
-#LOCAL_SRC_FILES := $(LOCAL_MODULE)
-#include $(BUILD_PREBUILT)
-
-# XDANDROID uses an init system that checks for a file in /system to determine build type
-include $(CLEAR_VARS)
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE := gingerbread.build
-LOCAL_MODULE_PATH := $(TARGET_OUT)
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
-# XDANDROID rootfs will mount bind over /system/lib/modules
-include $(CLEAR_VARS)
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE := .keep
-LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.com.android.dataroaming=false
 

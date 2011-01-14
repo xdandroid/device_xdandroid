@@ -49,6 +49,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/media_profiles.xml:/system/etc/media_profiles.xml
 
+# XDAndroid-specific configs and directories
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/gingerbread.build:system/gingerbread.build \
+	device/xdandroid/msm/vold.fstab:system/etc/vold.fstab \
+	device/xdandroid/msm/.keep:/system/lib/modules/.keep
+
 # XDAndroid-specific: APNs list and boot animation
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml \
