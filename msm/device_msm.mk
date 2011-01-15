@@ -29,7 +29,8 @@ PRODUCT_PACKAGES += \
 	OpenWnn \
 	libWnnEngDic \
 	libWnnJpnDic \
-	libwnndict
+	libwnndict \
+	libOmxCore
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES := \
