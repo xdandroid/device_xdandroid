@@ -37,6 +37,11 @@ USE_PV_WINDOWS_MEDIA := false
 
 BUILD_WITH_FULL_STAGEFRIGHT := true
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# IMPORTANT TODO: Update libsensors
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TARGET_USES_OLD_LIBSENSORS_HAL := true
+
 BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
 BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00500000)
 BOARD_SYSTEMIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x04380000)
@@ -50,6 +55,7 @@ USE_CAMERA_STUB := false
 # Our hardware is not OpenGLES-2 capable
 BOARD_NO_GL2 := true
 BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
+BOARD_HAS_LIMITED_EGL := true
 
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/xdandroid/msm/egl.cfg
