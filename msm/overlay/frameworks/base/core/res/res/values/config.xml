@@ -88,6 +88,8 @@
          the blur effect where it isn't worth the performance hit. -->
     <bool name="config_sf_slowBlur">true</bool>
 
+    <bool name="config_animateScreenLights">true</bool>
+
     <!-- The duration (in milliseconds) of a short animation. -->
     <integer name="config_shortAnimTime">100</integer>
 
