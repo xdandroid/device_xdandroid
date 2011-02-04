@@ -4,7 +4,7 @@
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_CPU_ABI := armeabi
-TARGET_ARCH_VARIANT := armv5te
+TARGET_ARCH_VARIANT := armv6j
 
 TARGET_NO_BOOTLOADER := true
 
@@ -55,7 +55,9 @@ USE_CAMERA_STUB := false
 # Our hardware is not OpenGLES-2 capable
 BOARD_NO_GL2 := true
 BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
-BOARD_HAS_LIMITED_EGL := true
+#BOARD_HAS_LIMITED_EGL := true
+
+TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/xdandroid/msm/egl.cfg
