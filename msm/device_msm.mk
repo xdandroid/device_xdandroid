@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
 	libWnnJpnDic \
 	libwnndict \
 	libOmxCore \
-	sensors.default \
+	sensors.xdandroid \
 	su
 
 # Install the features available on this device.
