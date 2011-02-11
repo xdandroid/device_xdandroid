@@ -29,7 +29,7 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_HAVE_BLUETOOTH := true
 
 # Rhodium has Broadcom bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
+#BOARD_HAVE_BLUETOOTH_BCM := true
 
 BOARD_VENDOR_USE_AKMD := true
 
@@ -57,7 +57,9 @@ BOARD_NO_GL2 := true
 BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
 #BOARD_HAS_LIMITED_EGL := true
 
+# Enable legacy graphics code in surfaceflinger, for performance improvement
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
+AVOID_DRAW_TEXTURE_EXTENSION := true
 
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/xdandroid/msm/egl.cfg
