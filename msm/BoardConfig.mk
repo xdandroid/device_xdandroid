@@ -22,7 +22,7 @@ WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_DRIVER_FW_AP_PATH      := "/etc/firmware/BCM4325_apsta.bin"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
-TARGET_BOOTLOADER_BOARD_NAME := msm
+TARGET_BOOTLOADER_BOARD_NAME := xdandroid
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 
@@ -36,11 +36,6 @@ BOARD_VENDOR_USE_AKMD := true
 USE_PV_WINDOWS_MEDIA := false
 
 BUILD_WITH_FULL_STAGEFRIGHT := true
-
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# IMPORTANT TODO: Update libsensors
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-TARGET_USES_OLD_LIBSENSORS_HAL := true
 
 BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
 BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00500000)
@@ -60,6 +55,8 @@ BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
 # Enable legacy graphics code in surfaceflinger, for performance improvement
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 AVOID_DRAW_TEXTURE_EXTENSION := true
+
+BOARD_VENDOR_XDANDROID_GPS_HARDWARE := xdandroid
 
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/xdandroid/msm/egl.cfg
