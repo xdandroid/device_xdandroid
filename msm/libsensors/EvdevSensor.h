@@ -60,7 +60,6 @@ private:
     char physDevName[20];
     int axisOrder[3];
     bool isBma150;
-    float conversionFactor;
 };
 
 /*****************************************************************************/

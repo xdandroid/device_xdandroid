@@ -55,8 +55,6 @@ EvdevSensor::EvdevSensor()
     
     isBma150 = false;
     
-    conversionFactor = 1.0;
-
     for (int i=0 ; i<numSensors ; i++)
         mDelays[i] = 200000000; // 200 ms by default
 }
