@@ -8,6 +8,7 @@ ZIP=signed-dream_devphone_userdebug-ota-14721.zip
 GAPPSZIP=gapps-gb-20110120-signed.zip
 GAPPSMIRROR="http://goo-inside.me/gapps/"
 HW3DZIP=hw3d.zip
+LIBOEMCAMERAZIP=liboemcamera.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
 
@@ -31,6 +32,9 @@ unzip -j -o "${ANDROID_ROOT}"/$ZIP system/bin/akmd system/etc/01_qcomm_omx.cfg s
 
 # Extract eclair hardware 3D driver
 [ -f "${ANDROID_ROOT}"/$HW3DZIP ] && unzip -j -o "${ANDROID_ROOT}"/$HW3DZIP 'system/*' -d "${ANDROID_ROOT}"/$DESTDIR
+
+ Extract patched camera libraries
+[ -f "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP ] && unzip -j "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP -d "${ANDROID_ROOT}"/$DESTDIR
 
 (cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g > ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -61,13 +65,14 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/brf6300.bin:system/etc/firmware/brf6300.bin \\
     __DESTDIR__/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \\
     __DESTDIR__/libaudioeq.so:system/lib/libaudioeq.so \\
-    __DESTDIR__/libqcamera.so:system/lib/liboemcamera.so \\
     __DESTDIR__/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
     __DESTDIR__/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
     __DESTDIR__/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     __DESTDIR__/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     __DESTDIR__/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    __DESTDIR__/libqcomm_omx.so:system/lib/libqcomm_omx.so
+    __DESTDIR__/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
+    __DESTDIR__/liboemcamera.so.dream:system/lib/liboemcamera.so.dream \\
+    __DESTDIR__/liboemcamera.so.legend:system/lib/liboemcamera.so
 
 EOF
 
