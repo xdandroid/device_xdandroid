@@ -34,7 +34,7 @@ unzip -j -o "${ANDROID_ROOT}"/$ZIP system/bin/akmd system/etc/01_qcomm_omx.cfg s
 [ -f "${ANDROID_ROOT}"/$HW3DZIP ] && unzip -j -o "${ANDROID_ROOT}"/$HW3DZIP 'system/*' -d "${ANDROID_ROOT}"/$DESTDIR
 
 # Extract patched camera libraries
-[ -f "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP ] && unzip -j "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP -d "${ANDROID_ROOT}"/$DESTDIR
+[ -f "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP ] && unzip -j -o "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP -d "${ANDROID_ROOT}"/$DESTDIR
 
 (cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g > ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
