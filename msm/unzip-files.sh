@@ -33,7 +33,7 @@ unzip -j -o "${ANDROID_ROOT}"/$ZIP system/bin/akmd system/etc/01_qcomm_omx.cfg s
 # Extract eclair hardware 3D driver
 [ -f "${ANDROID_ROOT}"/$HW3DZIP ] && unzip -j -o "${ANDROID_ROOT}"/$HW3DZIP 'system/*' -d "${ANDROID_ROOT}"/$DESTDIR
 
- Extract patched camera libraries
+# Extract patched camera libraries
 [ -f "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP ] && unzip -j "${ANDROID_ROOT}"/$LIBOEMCAMERAZIP -d "${ANDROID_ROOT}"/$DESTDIR
 
 (cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g > ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES := \\
 
 PRODUCT_COPY_FILES += \\
     __DESTDIR__/akmd:system/bin/akmd \\
-    __DESTDIR__/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \\
     __DESTDIR__/AudioFilter.csv:system/etc/AudioFilter.csv \\
     __DESTDIR__/AudioPara4.csv:system/etc/AudioPara4.csv \\
     __DESTDIR__/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
@@ -70,7 +69,6 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     __DESTDIR__/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     __DESTDIR__/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    __DESTDIR__/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
     __DESTDIR__/liboemcamera.so.dream:system/lib/liboemcamera.so.dream \\
     __DESTDIR__/liboemcamera.so.legend:system/lib/liboemcamera.so
 
