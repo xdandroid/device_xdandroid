@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
 
 # Drivers
 PRODUCT_PACKAGES += \
+	libhtcgeneric-ril \
 	sensors.xdandroid \
 	gps.xdandroid \
 	copybit.msm7k \
