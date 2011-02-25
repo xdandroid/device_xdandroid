@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
 	libOmxCore \
 	libmm-omxcore \
 	libqcomm_omx \
-	libopencorehw \
+	libstagefrighthw
 
 # Drivers
 PRODUCT_PACKAGES += \
