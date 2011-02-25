@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
 
 # Drivers
 PRODUCT_PACKAGES += \
+	libcamera \
 	libhtcgeneric-ril \
 	sensors.xdandroid \
 	gps.xdandroid \
