@@ -10,7 +10,8 @@ TARGET_NO_BOOTLOADER := true
 
 # Let's get some speed by default now.
 WITH_JIT := true
-ENABLE_JSC_JIT := true
+
+JS_ENGINE := v8
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
