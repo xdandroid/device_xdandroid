@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES := \
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.opengles.version=65536
+	ro.opengles.version=65537
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
