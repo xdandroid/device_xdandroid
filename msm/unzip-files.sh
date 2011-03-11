@@ -80,7 +80,8 @@ if [ -f "${ANDROID_ROOT}"/$GAPPSZIP ]
 then
 	(cat << EOF) | sed s:__DESTDIR__:$DESTDIR:g >> ../../../vendor/xdandroid/$DEVICE/device_$DEVICE-vendor-blobs.mk
 PRODUCT_COPY_FILES += \\
-    __DESTDIR__/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \\
+    __DESTDIR__/BooksPhone.apk:system/app/BooksPhone.apk \\
+    __DESTDIR__/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \\
     __DESTDIR__/FOTAKill.apk:system/app/FOTAKill.apk \\
     __DESTDIR__/GenieWidget.apk:system/app/GenieWidget.apk \\
     __DESTDIR__/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \\
