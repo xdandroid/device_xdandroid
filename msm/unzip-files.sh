@@ -5,7 +5,7 @@ DEVICE=msm
 ANDROID_ROOT=../../..
 
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
-GAPPSZIP=gapps-gb-20110120-signed.zip
+GAPPSZIP=gapps-gb-20110307-signed.zip
 GAPPSMIRROR="http://goo-inside.me/gapps/"
 HW3DZIP=hw3d.zip
 LIBOEMCAMERAZIP=liboemcamera.zip
