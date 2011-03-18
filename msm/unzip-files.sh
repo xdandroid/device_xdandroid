@@ -7,7 +7,7 @@ ANDROID_ROOT=../../..
 ZIP=signed-dream_devphone_userdebug-ota-14721.zip
 GAPPSZIP=gapps-gb-20110307-signed.zip
 GAPPSMIRROR="http://goo-inside.me/gapps/"
-HW3DZIP=hw3d.zip
+HW3DZIP=hw3d-20110311.zip
 LIBOEMCAMERAZIP=liboemcamera.zip
 
 DESTDIR=vendor/xdandroid/$DEVICE/proprietary
