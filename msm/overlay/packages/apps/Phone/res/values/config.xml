@@ -17,4 +17,7 @@
 <resources>
     <bool name="allow_incoming_call_touch_ui">true</bool>
     <bool name="allow_in_call_touch_ui">true</bool>
+
+    <!-- Flag indicating if the phone is a world phone -->
+    <bool name="world_phone">false</bool>
 </resources>
