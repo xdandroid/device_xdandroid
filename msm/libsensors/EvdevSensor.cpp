@@ -202,6 +202,9 @@ int EvdevSensor::openInput(const char* inputName)
 
                     D("using %s (name=%s,physDevName=%s)", devname, name, physDevName);
                     break;
+                } else {
+                    close(fd);
+                    fd = -1;
                 }
             }
             else
