@@ -26,7 +26,7 @@
 
 #include <cutils/log.h>
 
-//#define DEBUG
+#define DEBUG
 
 #ifdef DEBUG
 #   define D(...) LOGD(__VA_ARGS__)
@@ -69,7 +69,7 @@ int EvdevSensor::enable(int32_t handle, int en)
     switch (handle) {
         case ID_A: what = Accelerometer; break;
     }
-    
+
     int newState  = en ? 1 : 0;
     int err = 0;
 
@@ -80,21 +80,20 @@ int EvdevSensor::enable(int32_t handle, int en)
         }
         short flags = newState;
         FILE *fd = fopen(filename, "w");
-        
+
         err =  !fd ? -errno : 0;
         LOGE_IF(err, "enable(): open %s failed (%s)", filename, strerror(-err));
         free(filename);
-        
-        fprintf(fd, "%d\n", newState);
-        fclose(fd);
-        
+
         if (!err) {
+            fprintf(fd, "%d\n", newState);
+            fclose(fd);
             mEnabled &= ~(1<<what);
             mEnabled |= (uint32_t(flags)<<what);
             update_delay();
         }
     }
-    return 0;
+    return err;
 }
 
 int EvdevSensor::setDelay(int32_t handle, int64_t ns) {
