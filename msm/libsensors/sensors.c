@@ -36,6 +36,10 @@ static const struct sensor_t sSensorList[] = {
                 "Kionix/Bosh",
                 1, SENSORS_HANDLE_BASE+ID_A,
                 SENSOR_TYPE_ACCELEROMETER, 4.0*9.81f, (4.0*9.81f)/256.0f, 0.5f, 100, { } },
+        { "Light sensor",
+                "Unkown",
+                1, SENSORS_HANDLE_BASE+ID_L,
+                SENSOR_TYPE_LIGHT, 10240.0f, 1.0f, 0.5f, 0, { } },
 };
 
 static int open_sensors(const struct hw_module_t* module, const char* name,

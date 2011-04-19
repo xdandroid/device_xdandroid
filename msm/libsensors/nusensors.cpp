@@ -30,6 +30,7 @@
 
 #include "nusensors.h"
 #include "EvdevSensor.h"
+#include "LightSensor.h"
 
 /*****************************************************************************/
 
@@ -44,7 +45,8 @@ struct sensors_poll_context_t {
 
 private:
     enum {
-        evdev           = 0,
+        light           = 0,
+        evdev           = 1,
         numSensorDrivers,
         numFds,
     };
@@ -59,6 +61,8 @@ private:
         switch (handle) {
             case ID_A:
                 return evdev;
+            case ID_L:
+                return light;
         }
         return -EINVAL;
     }
@@ -68,6 +72,11 @@ private:
 
 sensors_poll_context_t::sensors_poll_context_t()
 {
+    mSensors[light] = new LightSensor();
+    mPollFds[light].fd = mSensors[light]->getFd();
+    mPollFds[light].events = POLLIN;
+    mPollFds[light].revents = 0;
+
     mSensors[evdev] = new EvdevSensor();
     mPollFds[evdev].fd = mSensors[evdev]->getFd();
     mPollFds[evdev].events = POLLIN;
