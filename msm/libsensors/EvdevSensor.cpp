@@ -26,7 +26,7 @@
 
 #include <cutils/log.h>
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
 #   define D(...) LOGD(__VA_ARGS__)
