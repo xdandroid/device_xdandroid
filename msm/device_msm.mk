@@ -78,7 +78,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/gingerbread.build:system/gingerbread.build \
 	device/xdandroid/msm/vold.fstab:system/etc/vold.fstab \
-	device/xdandroid/msm/.keep:/system/lib/modules/.keep
+	device/xdandroid/msm/.keep:/system/lib/modules/.keep \
+	device/xdandroid/msm/dhcpcd.conf:/system/etc/dhcpcd/dhcpcd.conf \
+	device/xdandroid/msm/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+
 
 # XDAndroid-specific: APNs list and boot animation
 PRODUCT_COPY_FILES += \
