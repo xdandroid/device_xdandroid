@@ -84,9 +84,10 @@ PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini \
 	device/xdandroid/msm/prebuilt/etc/wifi/wlan_loader:/system/etc/wifi/wlan_loader
 
-# XDAndroid-specific: APNs list and boot animation
+# XDAndroid-specific: APNs list, boot animation, vold config
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+	device/xdandroid/msm/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
 	device/xdandroid/msm/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
 # XDAndroid-specific: build identifier used by rootfs

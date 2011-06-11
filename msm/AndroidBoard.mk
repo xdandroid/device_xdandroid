@@ -19,14 +19,6 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.xdandroid.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
-# This will install the file in /system/etc
-#
-include $(CLEAR_VARS)
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE := vold.fstab
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
 # TODO: Look at this when we stop using haret+sd
 #include $(CLEAR_VARS)
 #LOCAL_MODULE := wlan.ko
