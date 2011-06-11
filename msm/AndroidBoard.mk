@@ -11,7 +11,7 @@ $(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 
 file := $(TARGET_OUT_KEYLAYOUT)/h2w_headset.kl
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/prebuilt/h2w_headset.kl | $(ACP)
+$(file) : $(LOCAL_PATH)/prebuilt/usr/keylayout/h2w_headset.kl | $(ACP)
 	$(transform-prebuilt-to-target)
 
 file := $(TARGET_ROOT_OUT)/init.xdandroid.rc
