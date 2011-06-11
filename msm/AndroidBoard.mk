@@ -33,7 +33,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE := .keep
 LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
-LOCAL_SRC_FILES := prebuilt/system/lib/modules/$(LOCAL_MODULE)
+LOCAL_SRC_FILES := prebuilt/lib/modules/$(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
 PRODUCT_PROPERTY_OVERRIDES := \
