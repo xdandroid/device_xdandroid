@@ -83,6 +83,13 @@ PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/wifi/Fw1251r1c.bin:/system/etc/wifi/Fw1251r1c.bin \
 	device/xdandroid/msm/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini
 
+# Firmware
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/prebuilt/etc/firmware/brf6350.bin:/system/etc/firmware/brf6350.bin \
+	device/xdandroid/msm/prebuilt/etc/firmware/bcm4325.hcd:/system/etc/firmware/bcm4325.hcd \
+	device/xdandroid/msm/prebuilt/etc/firmware/BCM4325_apsta.bin:/system/etc/firmware/BCM4325_apsta.bin \
+	device/xdandroid/msm/prebuilt/etc/firmware/brf6300.bin:/system/etc/firmware/brf6300.bin
+
 # XDAndroid-specific: APNs list, boot animation, vold config
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
