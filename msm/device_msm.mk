@@ -81,8 +81,7 @@ PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/wifi/loadit:/system/etc/wifi/loadit \
 	device/xdandroid/msm/prebuilt/etc/wifi/bcm432x/bcm4325-rtecdc.bin:/system/etc/wifi/bcm432x/bcm4325-rtecdc.bin \
 	device/xdandroid/msm/prebuilt/etc/wifi/Fw1251r1c.bin:/system/etc/wifi/Fw1251r1c.bin \
-	device/xdandroid/msm/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini \
-	device/xdandroid/msm/prebuilt/etc/wifi/wlan_loader:/system/etc/wifi/wlan_loader
+	device/xdandroid/msm/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini
 
 # XDAndroid-specific: APNs list, boot animation, vold config
 PRODUCT_COPY_FILES += \
