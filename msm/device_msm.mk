@@ -97,6 +97,10 @@ PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
 	device/xdandroid/msm/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
+# This is a high density device with more memory, so larger vm heaps for it.
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.heapsize=24m
+
 # XDAndroid-specific: build identifier used by rootfs
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/gingerbread.build:system/gingerbread.build
