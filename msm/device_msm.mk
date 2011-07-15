@@ -53,6 +53,11 @@ PRODUCT_PACKAGES += \
 	gralloc.msm7k \
 	lights.msm7k
 
+# Pull in the Superuser package and associated su binary.
+PRODUCT_PACKAGES += \
+	Superuser \
+	su
+
 # Install the features available on this device.
 PRODUCT_COPY_FILES := \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
