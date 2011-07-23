@@ -60,6 +60,6 @@ AVOID_DRAW_TEXTURE_EXTENSION := true
 BOARD_VENDOR_XDANDROID_GPS_HARDWARE := xdandroid
 
 # OpenGL drivers config file path
-BOARD_EGL_CFG := device/xdandroid/msm/egl.cfg
+BOARD_EGL_CFG := device/xdandroid/msm/prebuilt/egl.cfg
 
 -include vendor/xdandroid/msm/BoardConfigVendor.mk

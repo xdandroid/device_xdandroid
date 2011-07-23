@@ -72,24 +72,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
-	device/xdandroid/msm/media_profiles.xml:/system/etc/media_profiles.xml
+	device/xdandroid/msm/prebuilt/etc/media_profiles.xml:/system/etc/media_profiles.xml
 
 # XDAndroid-specific configs and directories
 PRODUCT_COPY_FILES += \
-	device/xdandroid/msm/gingerbread.build:system/gingerbread.build \
-	device/xdandroid/msm/vold.fstab:system/etc/vold.fstab \
-	device/xdandroid/msm/.keep:/system/lib/modules/.keep \
-	device/xdandroid/msm/dhcpcd.conf:/system/etc/dhcpcd/dhcpcd.conf \
-	device/xdandroid/msm/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
-
+	device/xdandroid/msm/prebuilt/etc/dhcpcd/dhcpcd.conf:/system/etc/dhcpcd/dhcpcd.conf \
+	device/xdandroid/msm/prebuilt/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
+	device/xdandroid/msm/prebuilt/etc/wifi/loadit:/system/etc/wifi/loadit \
+	device/xdandroid/msm/prebuilt/etc/wifi/bcm432x/bcm4325-rtecdc.bin:/system/etc/wifi/bcm432x/bcm4325-rtecdc.bin \
+	device/xdandroid/msm/prebuilt/etc/wifi/Fw1251r1c.bin:/system/etc/wifi/Fw1251r1c.bin \
+	device/xdandroid/msm/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini \
+	device/xdandroid/msm/prebuilt/etc/wifi/wlan_loader:/system/etc/wifi/wlan_loader
 
 # XDAndroid-specific: APNs list and boot animation
 PRODUCT_COPY_FILES += \
-	device/xdandroid/msm/apns-conf.xml:system/etc/apns-conf.xml \
-	device/xdandroid/msm/bootanimation.zip:system/media/bootanimation.zip
+	device/xdandroid/msm/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+	device/xdandroid/msm/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
+
+# XDAndroid-specific: build identifier used by rootfs
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/prebuilt/gingerbread.build:system/gingerbread.build
 
 PRODUCT_MANUFACTURER := XDAndroid
 
 # proprietary side of the device
 $(call inherit-product-if-exists, vendor/xdandroid/msm/device_msm-vendor.mk)
-
