@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
 	OpenWnn \
 	SpareParts \
 	Term \
-	su
+	su \
+	recovery
 
 # Libraries
 PRODUCT_PACKAGES += \
