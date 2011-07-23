@@ -89,6 +89,11 @@ PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/wifi/Fw1251r1c.bin:/system/etc/wifi/Fw1251r1c.bin \
 	device/xdandroid/msm/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini
 
+# XDAndroid-specific prebuilt media codecs
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/prebuilt/lib/libOmxH264Dec.so:/system/lib/libOmxH264Dec.so \
+	device/xdandroid/msm/prebuilt/lib/libOmxMpeg4Dec.so:/system/lib/libOmxMpeg4Dec.so
+
 # Firmware
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/firmware/brf6350.bin:/system/etc/firmware/brf6350.bin \
