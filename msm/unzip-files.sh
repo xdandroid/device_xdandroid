@@ -25,7 +25,7 @@ fi
 mkdir -p "${ANDROID_ROOT}"/$DESTDIR
 
 # Extract proprietary bits from dream rom
-unzip -j -o "${ANDROID_ROOT}"/$ZIP system/bin/akmd system/etc/01_qcomm_omx.cfg system/etc/AudioFilter.csv system/etc/AudioPara4.csv system/etc/AudioPreProcess.csv system/etc/firmware/brf6300.bin system/etc/wifi/Fw1251r1c.bin system/lib/egl/libGLES_qcom.so system/lib/libaudioeq.so system/lib/libgps.so system/lib/libhtc_acoustic.so system/lib/libhtc_ril.so system/lib/liblvmxipc.so system/lib/libmm-adspsvc.so system/lib/libqcamera.so system/lib/libOmxH264Dec.so system/lib/libOmxMpeg4Dec.so system/lib/libOmxVidEnc.so system/lib/libopencorehw.so system/lib/libqcomm_omx.so -d "${ANDROID_ROOT}"/$DESTDIR
+unzip -j -o "${ANDROID_ROOT}"/$ZIP system/bin/akmd system/etc/01_qcomm_omx.cfg system/etc/AudioFilter.csv system/etc/AudioPara4.csv system/etc/AudioPreProcess.csv system/etc/firmware/brf6300.bin system/etc/wifi/Fw1251r1c.bin system/lib/egl/libGLES_qcom.so system/lib/libaudioeq.so system/lib/libgps.so system/lib/libhtc_acoustic.so system/lib/libhtc_ril.so system/lib/liblvmxipc.so system/lib/libmm-adspsvc.so system/lib/libqcamera.so system/lib/libOmxVidEnc.so system/lib/libopencorehw.so system/lib/libqcomm_omx.so -d "${ANDROID_ROOT}"/$DESTDIR
 
 # Extract Google apps
 [ -f "${ANDROID_ROOT}"/$GAPPSZIP ] && unzip -j -o "${ANDROID_ROOT}"/$GAPPSZIP 'system/*' -d "${ANDROID_ROOT}"/$DESTDIR
@@ -66,8 +66,6 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/libaudioeq.so:system/lib/libaudioeq.so \\
     __DESTDIR__/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
     __DESTDIR__/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
-    __DESTDIR__/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
-    __DESTDIR__/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     __DESTDIR__/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     __DESTDIR__/liboemcamera.so.dream:system/lib/liboemcamera.so.dream \\
     __DESTDIR__/liboemcamera.so.legend:system/lib/liboemcamera.so
