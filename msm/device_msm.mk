@@ -72,10 +72,6 @@ PRODUCT_COPY_FILES := \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=65537
 
-# This is a high density device with more memory, so larger vm heaps for it.
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
-
 # media configuration xml file
 PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/media_profiles.xml:/system/etc/media_profiles.xml
