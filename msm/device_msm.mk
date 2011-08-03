@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.heapsize=24m
+	dalvik.vm.heapsize=32m
 
 # XDAndroid-specific: build identifier used by rootfs
 PRODUCT_COPY_FILES += \
