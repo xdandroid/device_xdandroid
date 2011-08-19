@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
 	OpenWnn \
 	SpareParts \
 	Term \
-	su \
 	recovery
 
 # Libraries
@@ -57,6 +56,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	Superuser \
 	su
+
+# Prebuilt
+PRODUCT_PACKAGES += \
+	.keep
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES := \
