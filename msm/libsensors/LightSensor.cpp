@@ -72,6 +72,9 @@ int LightSensor::readEvents(sensors_event_t* data, int count)
     // this in turn brings userland to switch to auto brightness mode
     // when requested (signaled to liblights)
     mPendingEvent.timestamp = getTimestamp();
+    // have PowerManagerService use the highest config_autoBrightnessLevels
+    // value it can find in overlay config.xml
+    mPendingEvent.light = 255;
     *data++ = mPendingEvent;
 
     // no more events to deliver after this read
