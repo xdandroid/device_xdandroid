@@ -64,11 +64,15 @@ PRODUCT_COPY_FILES += \\
     __DESTDIR__/brf6300.bin:system/etc/firmware/brf6300.bin \\
     __DESTDIR__/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \\
     __DESTDIR__/libaudioeq.so:system/lib/libaudioeq.so \\
-    __DESTDIR__/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
     __DESTDIR__/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
     __DESTDIR__/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     __DESTDIR__/liboemcamera.so.dream:system/lib/liboemcamera.so.dream \\
     __DESTDIR__/liboemcamera.so.legend:system/lib/liboemcamera.so
+
+ifneq (\$(BUILD_LIB_HTC_ACOUSTIC_WINCE),true)
+PRODUCT_COPY_FILES += \\
+    __DESTDIR__/libhtc_acoustic.so:system/lib/libhtc_acoustic.so
+endif # BUILD_LIB_HTC_ACOUSTIC_WINCE = false
 
 EOF
 

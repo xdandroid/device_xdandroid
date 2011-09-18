@@ -42,6 +42,11 @@ PRODUCT_PACKAGES += \
 	libqcomm_omx \
 	libstagefrighthw
 
+ifeq ($(BUILD_LIB_HTC_ACOUSTIC_WINCE),true)
+PRODUCT_PACKAGES += \
+	libhtc_acoustic
+endif
+
 # Drivers
 PRODUCT_PACKAGES += \
 	libcamera \
@@ -51,6 +56,11 @@ PRODUCT_PACKAGES += \
 	copybit.msm7k \
 	gralloc.msm7k \
 	lights.msm7k
+
+ifeq ($(BUILD_LIB_HTC_ACOUSTIC_WINCE),true)
+PRODUCT_PACKAGES += \
+	libhtc_acoustic
+endif
 
 # Pull in the Superuser package and associated su binary.
 PRODUCT_PACKAGES += \
