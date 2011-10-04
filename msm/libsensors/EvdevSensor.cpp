@@ -44,8 +44,6 @@ EvdevSensor::EvdevSensor()
       mPendingMask(0),
       mInputReader(32)
 {
-    data_fd = openInput(data_name);
-    
     memset(mPendingEvents, 0, sizeof(mPendingEvents));
 
     mPendingEvents[Accelerometer].version = sizeof(sensors_event_t);
