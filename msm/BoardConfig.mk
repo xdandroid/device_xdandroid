@@ -55,7 +55,7 @@ BOARD_GL_TEX_POW2_DIMENSION_REQUIRED := true
 
 # Enable legacy graphics code in surfaceflinger, for performance improvement
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
-AVOID_DRAW_TEXTURE_EXTENSION := true
+BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
 
 BOARD_VENDOR_XDANDROID_GPS_HARDWARE := xdandroid
 
