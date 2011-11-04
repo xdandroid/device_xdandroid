@@ -28,7 +28,7 @@
 
 #include "ProximitySensor.h"
 
-#define DEBUG
+//~ #define DEBUG
 
 #ifdef DEBUG
 #   define D(...) LOGD("ProximitySensor::"__VA_ARGS__)

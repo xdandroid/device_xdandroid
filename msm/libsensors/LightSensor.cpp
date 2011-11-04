@@ -28,7 +28,7 @@
 
 #include "LightSensor.h"
 
-#define DEBUG
+//~ #define DEBUG
 
 #ifdef DEBUG
 #   define D(...) LOGD("LightSensor::"__VA_ARGS__)
