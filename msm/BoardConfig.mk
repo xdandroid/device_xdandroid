@@ -8,8 +8,7 @@ TARGET_ARCH_VARIANT := armv6j
 
 TARGET_NO_BOOTLOADER := true
 
-# Let's get some speed by default now.
-WITH_JIT := true
+WITH_JIT := false
 
 JS_ENGINE := v8
 
