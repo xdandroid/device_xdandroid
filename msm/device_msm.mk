@@ -116,6 +116,11 @@ PRODUCT_COPY_FILES += \
 	device/xdandroid/msm/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
 	device/xdandroid/msm/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
+# XDAndroid-specific: kexec
+PRODUCT_COPY_FILES += \
+	device/xdandroid/msm/prebuilt/xbin/kexec:system/xbin/kexec \
+	device/xdandroid/msm/prebuilt/xbin/kexec.sh:system/xbin/kexec.sh
+
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.heapsize=32m
