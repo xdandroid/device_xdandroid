@@ -52,6 +52,7 @@ EvdevSensor::EvdevSensor()
     mPendingEvents[Accelerometer].acceleration.status = SENSOR_STATUS_ACCURACY_HIGH;
     
     isBma150 = false;
+    data_fd = openInput(data_name);
     
     for (int i=0 ; i<numSensors ; i++)
         mDelays[i] = 200000000; // 200 ms by default
