@@ -50,10 +50,10 @@ EvdevSensor::EvdevSensor()
     mPendingEvents[Accelerometer].sensor = ID_A;
     mPendingEvents[Accelerometer].type = SENSOR_TYPE_ACCELEROMETER;
     mPendingEvents[Accelerometer].acceleration.status = SENSOR_STATUS_ACCURACY_HIGH;
-    
-    isBma150 = false;
+
+    isNewBma150Driver = false;
     data_fd = openInput(data_name);
-    
+
     for (int i=0 ; i<numSensors ; i++)
         mDelays[i] = 200000000; // 200 ms by default
 }
@@ -75,7 +75,13 @@ int EvdevSensor::enable(int32_t handle, int en)
     if ((uint32_t(newState)<<what) != (mEnabled & (1<<what))) {
         char *filename;
         switch (what) {
-            case Accelerometer: asprintf(&filename, "/sys/class/i2c-adapter/i2c-0/%s/enable", physDevName+4);  break;
+            case Accelerometer:
+            if (isNewBma150Driver) {
+                asprintf(&filename, "/sys/devices/virtual/input/%s/mode", physDevName);
+            } else {
+                asprintf(&filename, "/sys/class/i2c-adapter/i2c-0/%s/enable", physDevName+4);
+            }
+            break;
         }
         short flags = newState;
         FILE *fd = fopen(filename, "w");
@@ -85,7 +91,7 @@ int EvdevSensor::enable(int32_t handle, int en)
         free(filename);
 
         if (!err) {
-            fprintf(fd, "%d\n", newState);
+            fprintf(fd, "%d\n", isNewBma150Driver ? (en ? 0 : 2) : newState);
             fclose(fd);
             mEnabled &= ~(1<<what);
             mEnabled |= (uint32_t(flags)<<what);
@@ -127,7 +133,11 @@ int EvdevSensor::update_delay()
         }
         short delay = int64_t(wanted) / 1000000;
         char *filename;
-        asprintf(&filename, "/sys/class/i2c-adapter/i2c-0/%s/rate", physDevName+4);
+        if (isNewBma150Driver) {
+            asprintf(&filename, "/sys/devices/virtual/input/%s/delay", physDevName);
+        } else {
+            asprintf(&filename, "/sys/class/i2c-adapter/i2c-0/%s/rate", physDevName+4);
+        }
         FILE *fd=fopen(filename, "w");
         free(filename);
         if(!fd) {
@@ -167,6 +177,7 @@ int EvdevSensor::openInput(const char* inputName)
             if (ioctl(fd, EVIOCGNAME(sizeof(name) - 1), &name) < 1) {
                 name[0] = '\0';
             }
+            D("openInput: inputName=%s name=%s\n", inputName, name);
             if (!strcmp(inputName, "detect"))
             {
                 if (!strcmp(name, "kionix-kxsd9"))
@@ -191,14 +202,19 @@ int EvdevSensor::openInput(const char* inputName)
                 {
                     bzero(physDevName, 20);
                     ioctl(fd, EVIOCGPHYS(sizeof(physDevName)-1), &physDevName);
+                    if (0 == strlen(physDevName)) {
+                        isNewBma150Driver = true;
+                        // eventX > inputX
+                        snprintf(physDevName, 20, "input%s", de->d_name + 5);
+                    }
                     axisOrder[0]=-1;
                     axisOrder[1]=2;
                     axisOrder[2]=-3;
 
                     parse_axis_order();
-                    isBma150 = true;
 
-                    D("using %s (name=%s,physDevName=%s)", devname, name, physDevName);
+                    D("using %s (name=%s,physDevName=%s,driver=%s)", devname,
+                        name, physDevName, isNewBma150Driver ? "new" : "old");
                     break;
                 } else {
                     close(fd);
