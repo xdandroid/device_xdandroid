@@ -12,4 +12,4 @@ ro.sf.lcd_density = 210
 # 0 => WCDMA Preferred.
 ro.telephony.default_network = 0
 
-dalvik.vm.execution-mode = int:jit
+dalvik.vm.execution-mode = int:fast
