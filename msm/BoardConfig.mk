@@ -62,4 +62,6 @@ BOARD_VENDOR_XDANDROID_GPS_HARDWARE := xdandroid
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/xdandroid/msm/prebuilt/lib/egl/egl.cfg
 
+BUILD_LIB_HTC_ACOUSTIC_WINCE := true
+
 -include vendor/xdandroid/msm/BoardConfigVendor.mk
